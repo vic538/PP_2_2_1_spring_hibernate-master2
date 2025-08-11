@@ -27,7 +27,7 @@ public class UserDaoImp implements UserDao {
 
    @Override
    @SuppressWarnings("unchecked")
-   public List<User> listUsers() {
+   public List<User> getListUsers() {
       TypedQuery<User> query=sessionFactory.getCurrentSession().createQuery("from User");
       return query.getResultList();
    }
@@ -38,7 +38,7 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-   public List<Car> listCars() {
+   public List<Car> getListCars() {
       TypedQuery<Car> query=sessionFactory.getCurrentSession().createQuery("from Car");
       return query.getResultList();
    }
